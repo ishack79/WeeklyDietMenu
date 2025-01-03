@@ -50,7 +50,7 @@ const dailyTotals = computed(() => ({
         <div>Fats: {{ dailyTotals.fats }}g / {{ store.dailyNutritionGoals.fats }}g</div>
       </div>
 
-      <v-expansion-panels>
+      <v-expansion-panels class="meal-panels">
         <v-expansion-panel
           v-for="meal in day.meals"
           :key="meal.id"
@@ -73,4 +73,18 @@ const dailyTotals = computed(() => ({
       </v-expansion-panels>
     </v-card-text>
   </v-card>
-</template>`
+</template>
+
+<style scoped>
+.meal-panels :deep(.v-expansion-panel) {
+  background-color: #f8f9fa;
+}
+
+.meal-panels :deep(.v-expansion-panel-title) {
+  background-color: #f8f9fa;
+}
+
+.meal-panels :deep(.v-expansion-panel-text) {
+  background-color: #ffffff;
+}
+</style>`
