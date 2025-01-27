@@ -48,7 +48,58 @@ export const useMealStore = defineStore('meals', () => {
           prepTime: 15,
           completed: false
         },
-        // Add more meals...
+        {
+          id: `lunch-${i}`,
+          type: 'lunch',
+          name: 'Grilled Chicken Salad',
+          time: '12:00',
+          calories: 450,
+          protein: 35,
+          carbs: 30,
+          fats: 15,
+          ingredients: [
+            { name: 'Chicken Breast', portion: '200g' },
+            { name: 'Lettuce', portion: '1 cup' },
+            { name: 'Tomatoes', portion: '1 medium' },
+            { name: 'Olive Oil', portion: '1 tbsp' }
+          ],
+          prepTime: 20,
+          completed: false
+        },
+        {
+          id: `dinner-${i}`,
+          type: 'dinner',
+          name: 'Baked Salmon with Veggies',
+          time: '19:00',
+          calories: 500,
+          protein: 40,
+          carbs: 20,
+          fats: 25,
+          ingredients: [
+            { name: 'Salmon', portion: '200g' },
+            { name: 'Broccoli', portion: '1 cup' },
+            { name: 'Carrots', portion: '1 medium' },
+            { name: 'Olive Oil', portion: '1 tbsp' }
+          ],
+          prepTime: 30,
+          completed: false
+        },
+        {
+          id: `snack-${i}`,
+          type: 'snack',
+          name: 'Greek Yogurt with Honey',
+          time: '16:00',
+          calories: 200,
+          protein: 10,
+          carbs: 25,
+          fats: 5,
+          ingredients: [
+            { name: 'Greek Yogurt', portion: '1 cup' },
+            { name: 'Honey', portion: '1 tbsp' }
+          ],
+          prepTime: 5,
+          completed: false
+        }
       ]
     }))
   }
